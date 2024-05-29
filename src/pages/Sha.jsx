@@ -13,7 +13,7 @@ const Sha = () => {
       <header>
         <nav>
           <ul>
-            <li><img src={require('./images/logo.png')} alt="logo" style={{ width: '500px', margin: '10px' }} /></li>
+            <li><img src={require('../images/logo.png')} alt="logo" style={{ width: '500px', margin: '10px' }} /></li>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#Registration">Registration</a></li>
             <li><a href="#FAQ"><abbr title="Frequently Ask Questions">FAQs</abbr></a></li>
@@ -36,7 +36,7 @@ const Sha = () => {
           <div className="Benefits"> 
             <h2>Benefits</h2>
             <p>The benefits under the Social Health Authority include Preventive, Promotive, Curative, Rehabilitative, and Palliative health services. These are provided at level 4, 5, and 6 health facilities under the fund.</p>
-            <p><img src={require('./images/benefit.jpg')} alt="doctor listening to patient" style={{ width: '500px', margin: '10px' }} /></p>
+            <p><img src={require('../images/benefit.jpg')} alt="doctor listening to patient" style={{ width: '500px', margin: '10px' }} /></p>
             
             <h2>Who Qualifies To Register?</h2>
             <p>Every person resident in Kenya is required to apply for registration to the Authority as a member of the Social Health Authority within ninety days upon the coming into force of these Regulations.</p>
@@ -46,7 +46,7 @@ const Sha = () => {
           <h2 id="What">What Is Covered?</h2>
           <p>The Social Health Authority covers integrated preventive, promotive, curative, rehabilitative, and palliative health services at level 4, 5, and 6 health facilities.</p>
           <p>This includes emergency services, critical care services beyond the benefits in the essential healthcare benefits package, treatment and management of chronic illnesses beyond the benefits in the essential healthcare benefits package of the Social Health Authority.</p>
-          <p><img src={require('./images/clinician.jpg')} alt="clinician" style={{ width: '500px', margin: '10px' }} /></p>
+          <p><img src={require('../images/clinician.jpg')} alt="clinician" style={{ width: '500px', margin: '10px' }} /></p>
         </section>
 
         <section id="Registration">
@@ -60,31 +60,31 @@ const Sha = () => {
             <section>
               <h2>Self Registration</h2>
               <div id="Download">
-                <p><img src={require('./images/step-1.png')} alt="step 1" style={{ width: '500px', margin: '10px' }} /></p>
+                <p><img src={require('../images/step-1.png')} alt="step 1" style={{ width: '500px', margin: '10px' }} /></p>
                 <h3>Download & Log into your eCitizen App</h3>
                 <p>Search for the eCitizen Gava Mkononi App on Google Playstore and download the app.</p>
                 <p>Once installed, log into your eCitizen account.</p>
                 <p>
                   <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
-                    <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
+                    <img src={require('../images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
               </div>
 
               <div id="guide"> 
-                <p><img src={require('./images/step-2.png')} alt="step 2" style={{ width: '500px', margin: '10px' }} /></p>
+                <p><img src={require('../images/step-2.png')} alt="step 2" style={{ width: '500px', margin: '10px' }} /></p>
                 <h3>Go through the self-activation guide</h3>
                 <p>Take a few minutes to go through the policies, instructions for self-onboarding, and the terms and conditions before continuing to the next step.</p>
               </div>
 
               <div id="face">
-                <p><img src={require('./images/step-3.png')} alt="step 3" style={{ width: '500px', margin: '10px' }} /></p>
+                <p><img src={require('../images/step-3.png')} alt="step 3" style={{ width: '500px', margin: '10px' }} /></p>
                 <h3>Scan your face for verification</h3>
                 <p>To verify that it is you, you are required to scan your face or fingerprint with your phone camera. The app will then verify your biometrics relying on government records.</p>
                 <p>If you are unable to scan your face or fingerprints, you can use the assisted activation route to activate your digital ID.</p>
                 <p>
                   <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
-                    <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
+                    <img src={require('../images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
               </div>
@@ -95,19 +95,19 @@ const Sha = () => {
             <section>
               <h2>Assisted Enrollment</h2>
               <div id="visit">
-                <p><img src={require('./images/assist-1.png')} alt="assisted 1" style={{ width: '500px', margin: '10px' }} /></p>
+                <p><img src={require('../images/assist-1.png')} alt="assisted 1" style={{ width: '500px', margin: '10px' }} /></p>
                 <h3>Visit your nearest Huduma Center/agent</h3>
                 <p>Go to your nearest Huduma Center or verified enrollment agent and ask for assisted activation for your Social Health Insurance.</p>
                 <p>Make sure you carry your National ID card to facilitate the process.</p>
                 <p>
                   <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
-                    <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
+                    <img src={require('../images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
               </div>
 
               <div id="scan">
-                <p><img src={require('./images/assist-2.png')} alt="assisted 2" style={{ width: '500px', margin: '10px' }} /></p>
+                <p><img src={require('../images/assist-2.png')} alt="assisted 2" style={{ width: '500px', margin: '10px' }} /></p>
                 <h3>Scan your ID card</h3>
                 <p>Scan your ID for identification and send a request to your eCitizen app to scan the QR code that shows up.</p>
               </div>
