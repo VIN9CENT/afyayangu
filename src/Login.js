@@ -79,15 +79,23 @@ const Login = () => {
 
   if (!isSignedIn) {
     return (
-      <div>
+     <> 
+     <header>
+    <img src={require('./images/logo.png')} alt="logo" style={{ width: '250px', margin: '10px' }} />
+    </header>
+      <section className='login'>
+        <div>
         <p><img src={require('./images/sha_register_img.png')} alt="SHA Register" /></p>
-        <p><img src={require('./images/logo.png')} style={{ width: '300px' }} alt="Logo" /></p>
-        <h2>Register with the Social Health Authority</h2>
+        </div>
+        <div>
+        <h2 id='register'>Register with the Social Health Authority</h2>
         <p>Kindly Sign In/Up with your Google account</p>
         <button onClick={handleSignIn} disabled={isSigningIn}>
           {isSigningIn ? 'Signing in...' : 'Google Sign In'}
         </button>
-      </div>
+        </div>
+      </section>
+      </>
     );
   }
 
@@ -97,5 +105,4 @@ const Login = () => {
 
   return <Dashboard user={user} userData={userData} handleSignOut={handleSignOut} />;
 };
-
 export default Login;

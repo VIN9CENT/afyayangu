@@ -1,10 +1,12 @@
 import React from 'react'
+import logo from './images/logo.png';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const Footer = () => {
   return (
     <footer>
+      <div>
      <h3>Reach Us</h3>
      <div className="email">
      <h4><i className="fas fa-envelope"></i> Email Addresses</h4>
@@ -15,6 +17,8 @@ const Footer = () => {
           <li><a href="mailto:complaint@health.go.ke">complaint@health.go.ke</a></li>
         </ul>
      </div>
+     </div>
+     <div>
      <div className="address">
      <address className="physical-address">
         <h3><i className="fas fa-map-marker-alt"></i> Physical Address</h3>
@@ -23,6 +27,12 @@ const Footer = () => {
         <p>P.O Box 30016-00100</p>
         <p>Nairobi, Kenya</p>
       </address>
+     </div>
+     </div>
+     <div className='logo'>
+     <figure className="logo-container">
+          <img src={logo} alt="logo" className="logo" style={{width:'350px'}}/>
+        </figure>
      </div>
     </footer>
   )

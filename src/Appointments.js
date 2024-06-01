@@ -5,8 +5,8 @@ const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
-    const db = getDatabase();
-    const appointmentsRef = ref(db, 'appointments/');
+    const database = getDatabase();
+    const appointmentsRef = ref(database, 'appointments/');
     onValue(appointmentsRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './index.css'; 
+import {Link}from 'react-router-dom';
 
 const Sha = () => {
   const [selectedOption, setSelectedOption] = useState('self');
@@ -13,55 +15,76 @@ const Sha = () => {
       <header>
         <nav>
           <ul>
-            <li><img src={require('./images/logo.png')} alt="logo" style={{ width: '500px', margin: '10px' }} /></li>
+            <li><img src={require('./images/logo.png')} alt="logo" style={{ width: '250px', margin: '10px' }} /></li>
             <li><a href="#overview">Overview</a></li>
-            <li><a href="#Registration">Registration</a></li>
+            <li><a href="#registration">Registration</a></li>
             <li><a href="#FAQ"><abbr title="Frequently Ask Questions">FAQs</abbr></a></li>
-            <li><a href="">Register</a></li>
+            <li> <Link to="/terms">Register</Link></li>
             <li><a href="">Login</a></li>
           </ul>
         </nav>
       </header>
       
       <main>
+      <section id='introduction'className='introduction'>
+        <div>
         <h2>Introducing Social Health Authority</h2>
         <p>Ensuring a healthier, more equitable future for all through comprehensive coverage and quality care without financial worry</p>
-        <p><br /><br /><a href="">Register</a></p>
+        <p> <a href="">Register</a></p>
+        </div>
+        </section>
 
-        <section id="Overview">
+        <section id='overview'className='overview'>
+          <div>
           <h2>Overview</h2>
           <p>SHA facilitates healthcare services from enlisted providers by pooling contributions—ensuring equitable distribution of quality healthcare. The Social Health Authority is established under section 25 of the Act and is utilized to pool all contributions made under the Act.</p>
           <p>SHA is designed to provide healthcare services from empaneled and contracted healthcare providers and healthcare facilities on referral from primary health facilities. The Social Health Authority ensures that every resident in Kenya can access a comprehensive range of quality health services they need without the burden of financial hardship.</p>
+          </div>
+          <div>
+         <p><img src={require('./images/example.jpg')} alt="doctor giving injection" style={{ width: '500px', margin: '10px' }} /></p>
+         </div>
+         </section>
 
-          <div className="Benefits"> 
+          <section id='benefits' className="benefits">
+            <div>
             <h2>Benefits</h2>
             <p>The benefits under the Social Health Authority include Preventive, Promotive, Curative, Rehabilitative, and Palliative health services. These are provided at level 4, 5, and 6 health facilities under the fund.</p>
-            <p><img src={require('./images/benefit.jpg')} alt="doctor listening to patient" style={{ width: '500px', margin: '10px' }} /></p>
-            
             <h2>Who Qualifies To Register?</h2>
             <p>Every person resident in Kenya is required to apply for registration to the Authority as a member of the Social Health Authority within ninety days upon the coming into force of these Regulations.</p>
             <p>The application must be accompanied by a copy of the national identification document or any other approved document, and for children without identification, documentation provided by the state department responsible for social protection.</p>
-          </div>
+            </div> 
+            <div>
+            <p><img src={require('./images/benefit.jpg')} alt="doctor listening to patient" style={{ width: '500px', margin: '10px' }} /></p>
 
-          <h2 id="What">What Is Covered?</h2>
+            </div>
+          </section>
+          <section id='covered'className='covered'>
+          <div>
+          <p><img src={require('./images/clinician.jpg')} alt="clinician" style={{ width: '500px', margin: '10px' }} /></p>
+          </div>
+          <div>
+          <h2 >What Is Covered?</h2>
           <p>The Social Health Authority covers integrated preventive, promotive, curative, rehabilitative, and palliative health services at level 4, 5, and 6 health facilities.</p>
           <p>This includes emergency services, critical care services beyond the benefits in the essential healthcare benefits package, treatment and management of chronic illnesses beyond the benefits in the essential healthcare benefits package of the Social Health Authority.</p>
-          <p><img src={require('./images/clinician.jpg')} alt="clinician" style={{ width: '500px', margin: '10px' }} /></p>
+          </div>
         </section>
-
-        <section id="Registration">
+        
+        <section id='registration'>
+          <div className='registration'>
           <h2>How To Register</h2>
-          <select value={selectedOption} onChange={handleSelect}>
+          <select value={selectedOption} onChange={handleSelect} className='dropdown'>
             <option value="self">Self Registration</option>
             <option value="assisted">Assisted enrollment</option>
           </select>
+          </div>
 
           {selectedOption === 'self' && (
-            <section>
-              <h2>Self Registration</h2>
-              <div id="Download">
-                <p><img src={require('./images/step-1.png')} alt="step 1" style={{ width: '500px', margin: '10px' }} /></p>
-                <h3>Download & Log into your eCitizen App</h3>
+           <>
+            <h2 id='guide'>Self Registration</h2>
+
+            <section className='process'>
+              <div>
+                <h3> 1. Download & Log into your eCitizen App</h3>
                 <p>Search for the eCitizen Gava Mkononi App on Google Playstore and download the app.</p>
                 <p>Once installed, log into your eCitizen account.</p>
                 <p>
@@ -70,16 +93,18 @@ const Sha = () => {
                   </a>
                 </p>
               </div>
-
-              <div id="guide"> 
-                <p><img src={require('./images/step-2.png')} alt="step 2" style={{ width: '500px', margin: '10px' }} /></p>
-                <h3>Go through the self-activation guide</h3>
+              <div>
+                <p><img src={require('./images/step-1.png')} alt="step 1"/></p>
+                </div>
+              <div> 
+                <p><img src={require('./images/step-2.png')} alt="step 2"/></p>
+                </div>
+                <div>
+                <h3>2. Go through the self-activation guide</h3>
                 <p>Take a few minutes to go through the policies, instructions for self-onboarding, and the terms and conditions before continuing to the next step.</p>
               </div>
-
-              <div id="face">
-                <p><img src={require('./images/step-3.png')} alt="step 3" style={{ width: '500px', margin: '10px' }} /></p>
-                <h3>Scan your face for verification</h3>
+              <div>
+                <h3>3. Scan your face for verification</h3>
                 <p>To verify that it is you, you are required to scan your face or fingerprint with your phone camera. The app will then verify your biometrics relying on government records.</p>
                 <p>If you are unable to scan your face or fingerprints, you can use the assisted activation route to activate your digital ID.</p>
                 <p>
@@ -88,15 +113,19 @@ const Sha = () => {
                   </a>
                 </p>
               </div>
+              <div>
+                <p><img src={require('./images/step-3.png')} alt="step 3"/></p>
+                </div>
             </section>
+            </>
           )}
 
           {selectedOption === 'assisted' && (
-            <section>
-              <h2>Assisted Enrollment</h2>
-              <div id="visit">
-                <p><img src={require('./images/assist-1.png')} alt="assisted 1" style={{ width: '500px', margin: '10px' }} /></p>
-                <h3>Visit your nearest Huduma Center/agent</h3>
+            <>
+             <h2 id='guide'>Assisted Enrollment</h2>
+            <section className='process'>
+              <div>
+                <h3>1. Visit your nearest Huduma Center/agent</h3>
                 <p>Go to your nearest Huduma Center or verified enrollment agent and ask for assisted activation for your Social Health Insurance.</p>
                 <p>Make sure you carry your National ID card to facilitate the process.</p>
                 <p>
@@ -104,14 +133,19 @@ const Sha = () => {
                     <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
+                </div>
+                <div>
+                <p><img src={require('./images/assist-1.png')} alt="assisted 1"/></p>
               </div>
-
-              <div id="scan">
-                <p><img src={require('./images/assist-2.png')} alt="assisted 2" style={{ width: '500px', margin: '10px' }} /></p>
-                <h3>Scan your ID card</h3>
+             <div>
+                <p><img src={require('./images/assist-2.png')} alt="assisted 2"/></p>
+                </div>
+                <div>
+                <h3>2. Scan your ID card</h3>
                 <p>Scan your ID for identification and send a request to your eCitizen app to scan the QR code that shows up.</p>
               </div>
             </section>
+            </>
           )}
         </section>
 
@@ -156,22 +190,26 @@ const Sha = () => {
         </section>
       </main>
 
-      <footer>
+      <div id="footer" className="footer">
         <h2>Help & Support</h2>
-        <div>
-          <h2><i className="fas fa-envelope"></i> Email</h2>
-          <p>Talk to us.</p>
-          <p><a href="mailto:Support@ecitizen.go.ke"><strong>Support@ecitizen.go.ke</strong></a></p>
-
-          <h2><i className="fas fa-map-marker-alt"></i> Visit us</h2>
-          <p>Physical Assistance</p>
-          <p>Any Huduma Center Countrywide</p>
-
-          <h2><i className="fas fa-phone"></i> Call us</h2>
-          <p>Mon-Fri from 8am to 5pm.</p>
-          <p><a href="tel:+254207903260"><strong>+254 20 790 3260</strong></a></p>
+        <div className="footer-grid">
+          <div className="footer-section">
+            <h3><i className="fas fa-envelope"></i> Email</h3>
+            <p>Talk to us.</p>
+            <p><a href="mailto:Support@ecitizen.go.ke"><strong>Support@ecitizen.go.ke</strong></a></p>
+          </div>
+          <div className="footer-section">
+            <h3><i className="fas fa-map-marker-alt"></i> Visit us</h3>
+            <p>Physical Assistance</p>
+            <p>Any Huduma Center Countrywide</p>
+          </div>
+          <div className="footer-section">
+            <h3><i className="fas fa-phone"></i> Call us</h3>
+            <p>Mon-Fri from 8am to 5pm.</p>
+            <p><a href="tel:+254207903260"><strong>+254 20 790 3260</strong></a></p>
+          </div>
         </div>
-      </footer>
+      </div>
     </>
   );
 };

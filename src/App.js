@@ -1,19 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './Login';
-import Dashboard from './Dashboard';
-import FormHeader from './FormHeader';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import HomePage from './HomePage';
+import Sha from './Sha'
+import Terms from './Terms';
+import Login from './Login'
 
 function App() {
   return (
     <Router>
-      <div>
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/form" element={<FormHeader />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sha" element={<Sha />} />
+        <Route path="/terms"element={<Terms/>}/>
+        <Route path="/login"element={<Login/>}/>
+      </Routes>
     </Router>
   );
 }

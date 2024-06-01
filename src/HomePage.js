@@ -1,40 +1,16 @@
-import { signOut } from 'firebase/auth';
-import React, { useEffect } from 'react';
-import { auth } from './FirebaseConfig';
-import { useNavigate } from 'react-router-dom';
-import FormHeader from './FormHeader';
+import React from 'react'
+import Header from './Header'
+import Content from './Content'
+import Footer from './Footer'
 
-function HomePage() {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    signOut(auth)
-      .then(() => {
-        navigate('/');
-      })
-      .catch((err) => {
-        console.log(err, 'err');
-      });
-  };
-
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((userData) => {
-      console.log(userData, 'userData');
-    });
-
-    // Cleanup subscription on unmount
-    return () => unsubscribe();
-  }, []);
-
+const HomePage = () => {
   return (
-    <>
-      <FormHeader />
-      <div>
-<button onClick={handleLogout}>Logout</button>
-      </div>
-    </>
-  );
+    <div>
+      <Header/>
+      <Content/>
+      <Footer/>
+    </div>
+  )
 }
 
-export default HomePage;
-
+export default HomePage

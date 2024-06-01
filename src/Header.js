@@ -1,18 +1,24 @@
 import React from 'react';
-import images from './ImageLoader';
+import logo from './images/logo.png';
 
 const Header = () => {
   return (
-    <header>
-      <nav>
-        <figure>
-        <img src={require('./images/logo.png')} alt="logo" style={{ width: '500px', margin: '10px' }} />
+    <header className="header">
+      <nav className="nav">
+        <figure className="logo-container">
+          <img src={logo} alt="logo" className="logo" />
         </figure>
-        <p><a href="">Login</a></p>
-        <p><a href="">Get Started</a></p>
+        <div className="nav-links">
+          <p className="sign">
+            <a href="/signin">Sign In</a>
+          </p>
+          <p className="register">
+            <a href="/register">Register</a>
+          </p>
+        </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
 export default Header;
