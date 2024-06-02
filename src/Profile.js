@@ -1,37 +1,44 @@
 import React, { useEffect, useState } from 'react';
 import { ref, onValue } from 'firebase/database';
-import {database } from  './FirebaseConfig'
+import { auth, database } from './FirebaseConfig';
+import { useNavigate } from 'react-router-dom';
 
-const Profile = ({ user }) => {
+const Profile = () => {
   const [userData, setUserData] = useState(null);
-  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    const user = auth.currentUser;
     if (user) {
       const userRef = ref(database, `users/${user.uid}`);
-      const unsubscribe = onValue(userRef, (snapshot) => {
+      onValue(userRef, (snapshot) => {
         setUserData(snapshot.val());
       }, (error) => {
-        setError(error);
+        console.error('Error fetching user data:', error);
       });
-
-      return () => unsubscribe();
+    } else {
+      navigate('/login'); // Redirect to login if user is not signed in
     }
-  }, [user]);
+  }, [navigate]);
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  }
+  const handleSignOut = () => {
+    auth.signOut().then(() => {
+      navigate('/login');
+    }).catch((error) => {
+      console.error('Sign out error:', error);
+    });
+  };
 
   if (!userData) {
-    return <div>Loading...</div>;
+    return <p>Loading...</p>;
   }
 
   return (
-    <div>
+    <div className="profile-component">
       <h1>Profile</h1>
       <p><strong>Name:</strong> {userData.displayName}</p>
       <p><strong>Email:</strong> {userData.email}</p>
+      <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 };

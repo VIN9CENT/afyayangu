@@ -20,7 +20,7 @@ const Sha = () => {
             <li><a href="#registration">Registration</a></li>
             <li><a href="#FAQ"><abbr title="Frequently Ask Questions">FAQs</abbr></a></li>
             <li> <Link to="/terms">Register</Link></li>
-            <li><a href="">Login</a></li>
+            <li> <Link to="/login">Login</Link></li>
           </ul>
         </nav>
       </header>
@@ -30,7 +30,7 @@ const Sha = () => {
         <div>
         <h2>Introducing Social Health Authority</h2>
         <p>Ensuring a healthier, more equitable future for all through comprehensive coverage and quality care without financial worry</p>
-        <p> <a href="">Register</a></p>
+        <p>  <Link to="/terms">Register</Link></p>
         </div>
         </section>
 
@@ -88,7 +88,7 @@ const Sha = () => {
                 <p>Search for the eCitizen Gava Mkononi App on Google Playstore and download the app.</p>
                 <p>Once installed, log into your eCitizen account.</p>
                 <p>
-                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
+                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer"class="styled-link">Google Play
                     <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
@@ -108,7 +108,7 @@ const Sha = () => {
                 <p>To verify that it is you, you are required to scan your face or fingerprint with your phone camera. The app will then verify your biometrics relying on government records.</p>
                 <p>If you are unable to scan your face or fingerprints, you can use the assisted activation route to activate your digital ID.</p>
                 <p>
-                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
+                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer"class="styled-link">Google Play
                     <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>
@@ -129,7 +129,7 @@ const Sha = () => {
                 <p>Go to your nearest Huduma Center or verified enrollment agent and ask for assisted activation for your Social Health Insurance.</p>
                 <p>Make sure you carry your National ID card to facilitate the process.</p>
                 <p>
-                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer">Google Play
+                  <a href="https://play.google.com/store/apps/details?id=ke.go.ecitizen" target="_blank" rel="noopener noreferrer"class="styled-link">Google Play
                     <img src={require('./images/googleplay.png')} alt="playstore icon" style={{ width: '50px', margin: '2px', display: 'block' }} />
                   </a>
                 </p>

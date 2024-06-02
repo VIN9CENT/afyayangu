@@ -20,7 +20,8 @@ const Terms = () => {
         
         <p id='proceed'>
           By proceeding,  you agree to our<strong>  terms and conditions</strong> and <strong>privacy policy</strong>, consenting to the collection, use  and sharing of your information as described therein.
-          <p id='link'><Link to="/login">Proceed</Link></p>
+          <p className='register'>
+            <Link to="/login" className="custom-link">Proceed</Link></p>
           </p>
           
           </div>

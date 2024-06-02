@@ -8,7 +8,9 @@ const Content = () => {
         <div>
           <h1>Take charge of <em>your well-being with</em> AfyaYangu</h1>
           <p>AfyaYangu simplifies medical record management, insurance tracking, and health monitoring. Seamlessly organize your healthcare data, appointments, and insurance covers with our user-friendly platform.</p>
-          <a href="#" className="btn-primary">Get Started</a>
+          <p className="register">
+        <Link to="/terms" className="custom-link">Get started</Link>
+        </p>
         </div>
         <div>
           <img src={require('./images/hero.png')} alt="Hero" className="hero-image" />
@@ -20,14 +22,15 @@ const Content = () => {
           <h2>About AfyaYangu</h2>
           <p>At AfyaYangu, we aim to streamline medical services for Kenyans. We provide a single source of truth for all your medical records while helping you keep track of your doctor visits and facilities you attend.</p>
         </div>
-        <div className="guides">
-          <h3>Guides</h3>
-          <ul>
-            <li><a href="/">How to register on AfyaYangu</a></li>
-            <Link to="/sha">About <abbr title="Social Health Authority">SHA</abbr></Link>
+          <div className="guides">
+            <h3>Guides</h3>
+              <ul>
+              <li><a href="/">How to register on AfyaYangu</a></li>
+            <li><Link to="/sha">About <abbr title="Social Health Authority">SHA</abbr></Link></li>
             <li><a href="/">Learn more about AfyaYangu</a></li>
           </ul>
         </div>
+
       </section>
 
       <section className="manage">

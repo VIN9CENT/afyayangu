@@ -20,7 +20,7 @@ const Dashboard = () => {
       <h1>Dashboard</h1>
       `<p>Welcome</p>`
       <Profile user={user}/>
-      <button onClick={handleSignOut}>Sign Out</button>
+      <button onClick={handleSignOut}className='custom-button'>Sign Out</button>
     </div>
   );
 };
